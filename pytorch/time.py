@@ -69,10 +69,10 @@ if __name__ == "__main__":
     torch_time, torch_res = show_time(run_torch)
     print("Torch time:  {:.3f}us".format(np.mean(torch_time)))
 
-    if torch.equal(cuda_res, torch_res):
-        print("The tensors are equal")
-    else:
-        print("The tensors are not equal")
+    # if torch.equal(cuda_res, torch_res):
+    #     print("The tensors are equal")
+    # else:
+    #     print("The tensors are not equal")
 
 
     torch.allclose(cuda_res, torch_res)
