@@ -107,3 +107,6 @@ python3 tensorflow/train.py --compiler cmake
 
 > **Q.** tensorflow.python.framework.errors_impl.NotFoundError: build/libadd2.so: undefined symbol: _ZTIN10tensorflow8OpKernelE  
 **A.** Check if `${TF_LFLAGS}` in `CmakeLists.txt` is correct.
+
+> **Q.** fatal error: Python.h: No such file or directory
+**A.** You should install the pythonX.X-dev by apt or something-like. And then update the CMakeLists.txt in pytorch or tensorflow. The path is something like "/usr/include/pythonx.x". If you install some different version in your system, the auto-method may fail and you must define it manually.
